@@ -37,6 +37,15 @@ utils.cpp - for helper/utility functions (e.g., splitting, conversions, register
 
 utils.hpp - for helper/utility functions (e.g., splitting, conversions, register parsing)
 
+## Testing Methodology:
+The code was compiled using Emscripten as a way to generate the wasm file needed for the HTML webpage.
+
+Compiling Command: "emcc *.cpp -o ../simulator.js -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s EXPORTED_RUNTIME_METHODS='["ccall","cwrap"]' -s EXPORT_ES6=0 --bind -std=c++17 -O2"
+
+The webpage also needed to use Python to connect to a server in order to initialize the simulator module.
+
+Server Command: "python3 -m http.server 8000" OR "python -m http.server 8000"
+
 ## AHA Moments
 - Since the original program was built with C++, we realized that we could utilize HTML for a GUI through the use of WebAssembly (WASM) 
 
