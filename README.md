@@ -1,9 +1,10 @@
 # RISCV-processor
-a simulator for a simplified RISC-V processor in C++
+A simulator for a simplified RISC-V processor in C++
 
 ## Supported Instructions:
 LW, SW, SLT, SLL, SLLI, BEQ, BLT
-additional instructions: ADD, SUB, AND, ADDI
+
+Additional Instructions: ADD, SUB, AND, ADDI
 
 ## Design Methodology:
 assembler.hpp - contains shared data structures, constants, and global declarations
